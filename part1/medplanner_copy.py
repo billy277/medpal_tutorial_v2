@@ -21,8 +21,12 @@ def headerRow():
 
 # Write a function that takes the following inputs (Day, date, am_medicine, am_dose, pm_medicine, pm_dose) outputs one row into the output table
 
-def outputRow(day, date, am_medicine, am_dose, pm_medicine, pm_dose):
-    output.append(f'{day}\t| {date}\t| {am_medicine}\t| {am_dose}\t| {pm_medicine}\t| {pm_dose}\t|')
+def outputRow(indicator, day, date, am_medicine, am_dose, pm_medicine, pm_dose):
+    output.append(f'{indicator} {day}\t| {date}\t| {am_medicine}\t| {am_dose}\t| {pm_medicine}\t| {pm_dose}\t|')
+
+    def currentDay():
+        if day == date.today():
+            indicator = "*"
     
 
 # Order Of Operations
